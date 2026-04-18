@@ -1,6 +1,8 @@
 // composables/usePoll.ts
 import { ref, watch, onUnmounted } from 'vue';
 import * as Y from 'yjs';
+import { signData, verifyAllVotesForOption } from '~/utils/crypto';
+import type { UserData, SignedData, PollData, OptionData, VoteData } from '~/utils/types';
 
 export const usePoll = (pollId: Ref<string | null>, user: Ref<UserData | null>) => {
     const pollData = ref<SignedData<PollData>>();

@@ -1,4 +1,4 @@
-import { SignedData, VoteData } from "./types";
+import { PollData, SignedData, VoteData } from "./types";
 /**
  * Gets the WebCrypto API regardless of environment (Node vs Browser)
  */

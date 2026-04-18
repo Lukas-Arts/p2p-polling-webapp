@@ -1,3 +1,5 @@
+import type { SignedData, PollData, VoteData } from "./types";
+
 // utils/crypto.ts
 export const generateUserKeyPair = async () => {
   return await window.crypto.subtle.generateKey(

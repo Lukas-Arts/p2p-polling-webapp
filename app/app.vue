@@ -105,6 +105,9 @@ input[type="file"] {
 
 <script setup lang="ts">
     import { v4 as uuidv4 } from 'uuid';
+    import type { UserData } from './utils/types';
+    import { usePoll } from './composables/usePoll';
+    import { generateUserKeyPair, exportPrivateKey, savePrivateKeyToFile, exportPublicKey, stringToCryptoKey } from './utils/crypto';
     const activePollId = ref<string | null>(null);
     const user = shallowRef<UserData | null>(null);
 

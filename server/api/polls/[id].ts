@@ -1,4 +1,5 @@
 import * as Y from 'yjs';
+import { stringToCryptoKey, verifyChainedVote } from '~~/server/utils/crypto';
 import { PollData, SignedData } from '~~/server/utils/types';
 // server/api/polls/[id].ts
 export default defineEventHandler(async (event) => {
